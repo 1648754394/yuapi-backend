@@ -29,7 +29,7 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         //TODO 简单校验后续可添加
         if(add) {
             //创建时id必须为空
-            if (ObjectUtils.anyNull(id)) {
+            if (id != null) {
                 throw new BusinessException(ErrorCode.PARAMS_ERROR);
             }
         }

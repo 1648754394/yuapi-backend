@@ -1,5 +1,6 @@
 package com.yupi.project.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
@@ -18,7 +19,7 @@ public class InterfaceInfo implements Serializable {
     /**
      * 主键
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -30,6 +31,14 @@ public class InterfaceInfo implements Serializable {
      * 描述
      */
     private String description;
+
+    /**
+     * 请求参数
+     * [
+     *  {"name":"user","type":"string"}
+     * ]
+     */
+    private String requestParams;
 
     /**
      * 接口地址
